@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Pasteleria Peimbert's</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    /* footer{
+      width: 100%; 
+      height: 70px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .container{
+      height: calc(100vh - 70px);
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="pasteleria-cliente.html">Cliente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pasteleria-admin.html">Administrador</a>
+          </li>
+        </ul>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+        </div>
+      </div>
+    </nav>  
+  </header>
+  <!-- Content -->
+  <div class="container">
+    <h1 class="text-center">Pasteleria Peimbert's</h1>
+  <br>
+  <div class="row">
+      <div class="col">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th># de pedido</th>
+                <th>Nombre cliente</th>
+                <th>Fecha entrega</th>
+                <th>Ver detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Erik Joel Peimbert</td>
+                <td>06/03/2022</td>
+                <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPedido">Detalles...</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Silvia Cabrera Cosio</td>
+                <td>08/03/2022</td>
+                <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPedido">Detalles...</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Maria Fernanda Corona</td>
+                <td>06/03/2022</td>
+                <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPedido">Detalles...</button></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  <div class="row" style="width: 60%; height: 80%;">
+    
+    <div class="col-6 ml-6 border">
+        <label for="Sabores_faltantes"><strong>Sabor de pastel faltante</strong></label>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>          
+    </div>
+    
+    <div class="col-6 border">
+        <label for="Sabores_faltantes"><strong>Adorno faltante</strong></label>
+        <div>
+            <canvas id="myChart2"></canvas>
+        </div>          
+    </div>
+</div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalPedido" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Realiza tu pedido...</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3 row">
+              <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Erik Joel Peimbert" disabled>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="email" placeholder="ejemplo@hotmail.com" disabled>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputTel" class="col-sm-2 col-form-label">Teléfono</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="tel" placeholder="5520255455" disabled>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputDescGen" class="col-sm-2 col-form-label">Descripción General</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="desc_general" rows="3" disabled placeholder="Pastel para boda"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <label for="inputDescGen" class="col-sm-2 col-form-label">Adornos:</label>
+              <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="adorno" value="Personaje">
+                  <label class="form-check-label" for="adorno">Personaje</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="adorno" value="Adorno Feliz cumpleaños" checked>
+                  <label class="form-check-label" for="adorno">Adorno Feliz cumpleaños</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="adorno" value="Pareja de novios">
+                  <label class="form-check-label" for="adorno">Pareja de novios</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label for="inputDescGen" class="col-sm-2 col-form-label">Sabores:</label>
+              <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sabor" id="sabor1" value="chocolate">
+                  <label class="form-check-label" for="sabor">Chocolate</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sabor" id="sabor2" value="fresa">
+                  <label class="form-check-label" for="sabor">Fresa</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sabor" id="sabor3" value="vainilla" checked>
+                  <label class="form-check-label" for="sabor">Vainilla</label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputTel" class="col-sm-2 col-form-label">Fecha entrega</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="date" value="06/03/2022" disabled>
+                </div>
+              </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer>
+  <ul class="nav justify-content-center border-bottom">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cliente</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Administrador</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Acerca de nosotros</a></li>
+  </ul>
+  <p class="text-center text-muted">© 2022 Launch X</p>
+</footer>
+
+</body>
+
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const data = {
+  labels: [
+    'Fresa',
+    'Chocolate',
+    'Vainilla'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [2, 1, 1],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(75, 57, 20)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+
+const dataArreglos = {
+  labels: [
+    'Personajes',
+    'Feliz cumpleaños',
+    'Pareja'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [1, 2, 1],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+  
+const config = {
+  type: 'doughnut',
+  data: data,
+};
+
+const configArreglos = {
+  type: 'doughnut',
+  data: dataArreglos,
+};
+</script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      configArreglos
+    );
+  </script>
+   
+   
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Pasteleria Peimbert's</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    /* footer{
+      width: 100%; 
+      height: 70px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .container{
+      height: calc(100vh - 70px);
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Cliente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Administrador</a>
+          </li>
+        </ul>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+        </div>
+      </div>
+    </nav>  
+  </header>
+  <!-- Content -->
+  <div class="container">
+    <h1 class="text-center">Pasteleria Peimbert's</h1>
+  <br>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="https://ecumple.com/wp-content/uploads/2020/06/pastel-kit-kat8-500x500.jpg" class="card-img-top" width="200px" height="300px">
+            <div class="card-body">
+              <h5 class="card-title">Pastel Kit Kat</h5>
+              <p>Pastel de chocolate kik kat con cobertura de luneras M'm de tres leches.</p>
+              <p><strong>$500 MXN</strong></p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" data-bs-toggle="modal" data-bs-target="#modalPedido" type="button">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://t2.rg.ltmcdn.com/es/posts/2/4/9/pastel_de_fresa_23942_600.jpg" class="card-img-top" width="200px" height="300px">
+            <div class="card-body">
+              <h5 class="card-title">Pastel de Fresa</h5>
+              <p>Pastel con cobertura y relleno de fresa acompañado de chantilly</p>
+              <p><strong>$200 MXN</strong></p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" data-bs-toggle="modal" data-bs-target="#modalPedido" type="button">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://file.adomicil.io/esperanza.tr3sco.net/_files/images/product/comegalletascrema-0275359532458409.jpg" class="card-img-top" width="200px" height="300px">
+            <div class="card-body">
+              <h5 class="card-title">Pastel comegalletas</h5>
+              <p>Pastel de tres leches con relleno de galletas y chantilly  con forma de comegalletas.</p>
+              <p><strong>$350 MXN</strong></p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" data-bs-toggle="modal" data-bs-target="#modalPedido" type="button">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center mt-4">Adornos para pastel</h2>
+      <div class="col-12 mt-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="https://m.media-amazon.com/images/I/41V39PXn9JL._AC_.jpg" class="card-img-top" width="100px" height="200px">
+              <div class="card-body">
+                <p>Decoración para tarta con personajes de dibujos animados.</p>
+                <p><strong>$100 MXN</strong></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_616194-MLM45277082054_032021-O.webp" class="card-img-top" width="100px" height="200px">
+              <div class="card-body">
+                <p>Decoración Adorno Feliz Cumpleaños Disney Princesas.</p>
+                <p><strong>$50 MXN</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_970548-MLM40394879519_012020-O.webp" class="card-img-top" width="100px" height="200px">
+              <div class="card-body">
+                <p>Pareja De Novios Para Pasteles O Adornos Mod Azul Y Rosa.</p>
+                <p><strong>$150 MXN</strong></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  </div>
+<div class="py-5">
+  <div  class="text-center">
+    <h2>Contactanos</h2>
+    <div class="row">
+      <div class="col-12">
+        <p>Dirección: Los Héroes ixtapaluca calle 23</p>
+        <p>Teléfono: 55255451522</p>
+        <p>Horarios de atención 9 AM a  9 PM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+<footer>
+  <ul class="nav justify-content-center border-bottom">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cliente</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Administrador</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Acerca de nosotros</a></li>
+  </ul>
+  <p class="text-center text-muted">© 2022 Launch X</p>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="modalPedido" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Realiza tu pedido...</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 row">
+            <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Erik Joel Peimbert">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="email" placeholder="ejemplo@hotmail.com">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputTel" class="col-sm-2 col-form-label">Teléfono</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="tel" placeholder="5520255455">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputDescGen" class="col-sm-2 col-form-label">Descripción General</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="desc_general" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <label for="inputDescGen" class="col-sm-2 col-form-label">Adornos:</label>
+            <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="adorno" value="Personaje">
+                <label class="form-check-label" for="adorno">Personaje</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="adorno" value="Adorno Feliz cumpleaños">
+                <label class="form-check-label" for="adorno">Adorno Feliz cumpleaños</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="adorno" value="Pareja de novios">
+                <label class="form-check-label" for="adorno">Pareja de novios</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="inputDescGen" class="col-sm-2 col-form-label">Sabores:</label>
+            <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sabor" id="sabor1" value="chocolate">
+                <label class="form-check-label" for="sabor">Chocolate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sabor" id="sabor2" value="fresa">
+                <label class="form-check-label" for="sabor">Fresa</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sabor" id="sabor3" value="vainilla">
+                <label class="form-check-label" for="sabor">Vainilla</label>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</html>
